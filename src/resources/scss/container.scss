@@ -1,0 +1,224 @@
+
+.home-films{
+    margin-bottom: 20px;
+}
+.home-films-list{
+    display: flex;
+    
+}
+
+.home-films-item{
+    margin-top: 20px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 .0625rem .125rem 0 rgba(0,0,0,0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
+}
+.home-films-item:hover{
+    box-shadow: 0 .0625rem .125rem 0 rgba(0,0,0,.06);
+    transform: translateY(-2px);
+}
+.home-films-item__link{
+    text-decoration: none;
+}
+.home-films-item__img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+.home-films-item__name{
+    margin: 10px ;
+    font-size: 2em;
+    height: 5rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.home-films-item__idmb{
+    position: absolute;
+    text-decoration: none;
+    font-size: 1.6rem;
+    top:20px;
+    left: -6px;
+    padding-right: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding-left: 1rem;
+    border-radius: 0 2px 2px 0;
+    
+}
+.home-films-item__idmb-icon{
+    margin-right: .5rem;
+    font-weight: 300;
+}
+.pagination{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.pagination-item{
+
+}
+.pagination-item--active .pagination-item__link{
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.pagination-item__icon{
+
+}
+
+.film-poster{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 .0625rem .125rem 0 rgba(0,0,0,0.1);
+}
+.film-detail{
+    margin: 20px;
+}
+.film-detail-name{
+    margin-top: .5rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.film-rate{
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-style: italic;
+}
+.film-idmb{
+    margin-left: 3%;
+}
+.film-status{
+    margin-left: 3%;
+}
+.film-resolution{
+    margin-left: 3%;
+}
+.film-info{
+    padding-left: 0;
+    margin-left: 3%;
+}
+.film-info-item{
+    color: var(--text-color);
+    font-size: 1.8rem;
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+.film-button-block{
+    margin: 3%;
+}
+.film-btn{
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 2%;
+    font-size: 1.4rem;
+    outline: none;
+    color: var(--white-color);
+    font-weight: 600;
+    box-shadow: 0 4px #999;
+    will-change: transform;
+    cursor: pointer;
+}
+.film-btn:hover{
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+.film-btn:active{
+    background-color: silver;
+}
+
+.film-btn-watch{
+    background-color: rgb(255, 107, 91);
+}
+.film-btn-trailer{
+    background-color: rgb(53, 225, 255);
+}
+.film-content-block{
+    width: 70%;
+    background-color: var(--white-color) ;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 15%;
+    margin-top: 20px;
+    border: 1px solid rgb(114, 114, 114);
+}
+.film-content-header{
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+.film-content-text{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.film-trailer-block{
+    width: 70%;
+    background-color: var(--white-color) ;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 15%;
+    margin-top: 20px;
+    border: 1px solid rgb(114, 114, 114);
+    margin-bottom: 30px;
+}
+.trailer-frame{
+    width:100%;
+    height:  calc(100vw * .28);
+}
+.film-content__watch{
+    margin: 3%;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.film-watch-block{
+    width: 900%;
+    background-color: var(--white-color) ;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 5%;
+    margin-top: 20px;
+    border: 1px solid rgb(114, 114, 114);
+    margin-bottom: 30px;
+}
+.watch-frame{
+    width:100%;
+    height:  calc(100vw * .40);
+}
