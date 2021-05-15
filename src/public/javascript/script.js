@@ -76,11 +76,12 @@ fetch("/user/apis/info")
                 </button></form>`
             }
             else if (data.role == "admin") {
-                htmlstring += `<button class="header__userinfo-history">
+                htmlstring += `<form action="/user/managefilm" method="GET">
+                <button class="header__userinfo-history">
                                     Quản lí phim
                                 </button><button class="header__userinfo-history">
                                     Quản lí người dùng
-                                </button>`;
+                                </button></form>`;
             }
             htmlstring += `<form action="/user/apis/logout" method="GET">
                                 <button type="submit" class="header__userinfo-history">
@@ -105,3 +106,5 @@ function showUserInfo() {
             document.getElementById("header__userinfo").style.display = "block";
         } else document.getElementById("header__userinfo").style.display = "none";
 }
+
+

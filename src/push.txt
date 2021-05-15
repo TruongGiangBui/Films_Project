@@ -1,0 +1,30 @@
+Vân anh:
+    src/resources/views/films/*     (2file)
+    src/resources/views/layouts/*   (1file_)
+    src/resources/views/home.hbs    
+    src/resources/views/search.hbs
+    src/resources/scss/*
+Đình Hiếu:
+    src/resources/views/user/*      (6file)
+Dương
+    src/routes/*
+    src/util/*
+    src/middleware/*
+
+
+
+link github nguồn: https://github.com/TruongGiangBui/Films_Project.git
+cấm push: tải về trong 1 thư mục
+ rồi push lên repo này: https://github.com/TruongGiangBui/DAHG_WEB.git
+
+
+Hướng dẫn sử dụng:
+    Tải code từ repo nguồn về (lưu ý là tải nếu pull về thì lúc push nó sẽ push lên cái thứ nhất)
+    
+    git init
+    git remote add origin https://github.com/TruongGiangBui/DAHG_WEB.git
+    đăng nhập git cuar bạn vào (nếu nó yc)
+    
+    git add <link đường dẫn đã được liệt kê phía trên>
+    git commit -m "tên file/foler được push"
+    git push origin master

@@ -2,10 +2,17 @@ const Film = require('../models/Films');
 
 class ApiController {
     allfilms(req,res,next) {
-        Film.find()
-            .then(films => {
-                res.send(films);
-        }).catch(next)
+        var query = {};
+        var page = 1;
+        if (req.query.page) page = Number(req.query.page)
+        var begin = (page - 1) * 10
+        var end = page * 10;
+        if (req.query.keyword) query ={ $text: { $search: req.query.keyword} } ;
+        Film.find(query)
+        .then((films) => {
+            res.send(films.slice(begin,end))
+      })
+      .catch(next);
     }
     mostviewsfilms(req, res, next) {
         Film.find(

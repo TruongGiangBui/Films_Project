@@ -74,9 +74,8 @@ class UserController {
     gethistory(req, res, next) {
         var page = 1;
         if (req.query.page) page = Number(req.query.page)
-        var begin = (page - 1) * 5
-        var end = page * 5;
-        console.log(page)
+        var begin = (page - 1) * 10
+        var end = page * 10;
         User.findOne({ username: req.cookies.user })
             .then(user =>{
                 res.send(user.history.reverse().slice(begin, end));
@@ -124,7 +123,7 @@ class UserController {
     //role admin
     //post
     uploadfilm(req, res, next) {
-        res.send("uploadfilm")
+        res.send(req.file)
     }
 }
 module.exports = new UserController();

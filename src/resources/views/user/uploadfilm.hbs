@@ -1,0 +1,196 @@
+<div class="app">
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="/" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                </ul>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item
+                        header__navbar-item-has-notify">
+                        <i class="fas fa-bell header__navbar-icon"></i>
+                        <div onclick=viewNotify()
+                            class="header__navbar-item-link">Thông báo</div>
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Thông báo mới nhận</h3>
+                            </header>
+                            <ul class="header__notify-list"
+                                id="header__notify-list">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="/user/login" class="header__navbar-item-link">Đăng nhập</a>
+                    </li>
+                    <li class="header__navbar-item" >
+                            <i class="fas fa-user-circle"></i>
+                            <div onclick=showUserInfo() class="header__navbar-item-link">Tài khoản</div>
+                            <div class="header__userinfo" id="header__userinfo">
+                                <div class="header__userinfo-logo">
+                                    <i class="fas fa-user-circle header__userinfo-logo-icon"></i>
+                                </div>
+
+                            </div>
+                        </li>
+                        
+                </ul>
+            </nav>
+            <div class="header-with-search">
+                <img src="/img/logo.png" alt="" class="header-logo">
+                <div class="header__search">
+                    <form class="header__search-form" action="/search">
+                        <input name="keyword" type="text"
+                            class="header__search-input"
+                            placeholder="Nhap ten phim">
+                        <button type="submit"
+                            class="header__search-btn">
+                            <i class="fas fa-search
+                                header__search-btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-9" style="margin-top:40px">
+                    <div class="manage_film">
+                            <h1 class="manage_film_header">Quản lý phim</h1>
+                            <div class="manage_film_menu">
+                                
+                                    <a href="/user/uploadfilm"class="admin_button_link" >
+                                        <div class="admin_button">
+                                            Tải phim lên
+                                        </div>
+                                    </a>
+                               
+                                
+                                    <a href="/user/managefilm"class="admin_button_link" >
+                                        <div class="admin_button">
+                                            Xem danh sách phim
+                                        </div>
+                                    </a>
+                               
+                                </div>
+
+                                                 
+                            <h1 class="manage_film_header">Tải phim lên</h1>
+                                <div id="alert" class="film_upload_alert">{{alert}}</div>
+                                <script>
+                                    if(document.getElementById("alert").innerHTML=="") document.getElementById("alert").style.display="none";
+                                </script>
+                                <form action="/user/apis/uploadfilm" class="film__upload__form" id="uploadform" method="POST"  enctype="multipart/form-data">
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tên phim tiếng Anh</div>
+                                        <div class="film__upload__input-box"><input name="movie_name_eng" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tên phim tiếng Việt</div>
+                                        <div class="film__upload__input-box"><input name="movie_name_vie" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tải lên poster</div>
+                                        <div class="film__upload__input-box film__upload__input-box-file">
+                                            <input name="poster" type="file" class="film__upload__input-file">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Link trailer</div>
+                                        <div class="film__upload__input-box"><input name="trailer_link" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Link phim</div>
+                                        <div class="film__upload__input-box"><input name="film_link" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Trạng thái</div>
+                                        <div class="film__upload__input-box"><input name="status" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Điểm IDMB</div>
+                                        <div class="film__upload__input-box"><input name="idmb" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Đạo diễn</div>
+                                        <div class="film__upload__input-box"><input name="director" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Quốc gia</div>
+                                        <div class="film__upload__input-box"><input name="country" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Ngày phát hành</div>
+                                        <div class="film__upload__input-box"><input name="release_date" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Thời lượng</div>
+                                        <div class="film__upload__input-box"><input name="timespan" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Chất lượng</div>
+                                        <div class="film__upload__input-box"><input name="quality" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Độ phân giải</div>
+                                        <div class="film__upload__input-box"><input name="resolution" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tóm tắt nội dung phim</div>
+                                        <div class="film__upload__input-box"><textarea name="film_content" rows="10"class="film__upload__input-content" ></textarea>
+                                            </div>
+                                    </div>
+                                    <input type="submit" class="admin_button upload-form-submit-btn" value="Tải phim lên">
+                                </form>
+                        </div>
+                    </div>
+                <div class="grid__column-3">
+                    <nav class="category">
+                        <h2 class="category__heading">
+                            <i class="fas fa-list-ul
+                                category__heading-icon"></i>
+                            Top phim xem nhiều
+                        </h2>
+                        <ul class="category-list" id="most-views-list">
+                            
+                        </ul>
+                        
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-6 footer-contact">
+                    <a href="" class="footer-link">
+                        <i class="fab fa-facebook"></i> My facebook
+                    </a>
+                    <a href="" class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                        abcxyz@sis.edu.vn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
