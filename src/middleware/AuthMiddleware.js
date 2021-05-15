@@ -5,7 +5,7 @@ module.exports = {
         if (req.cookies.user) {
             User.findOne({ username: req.cookies.user})
             .then(user => {
-                if (user.username === req.cookies.user&&user.role=="user") {
+                if (user.username === req.cookies.user&&(user.role==="user"||user.role==="admin")) {
                     next();
                 }
                 else res.send({ err: "Access denies" })
@@ -18,7 +18,7 @@ module.exports = {
         if (req.cookies.user) {
             User.findOne({ username: req.cookies.user})
             .then(user => {
-                if (user.username === req.cookies.user&&user.role=="admin") {
+                if (user.username === req.cookies.user&&user.role==="admin") {
                     next();
                 }
                 else res.send({ err: "Access denies" })
@@ -27,5 +27,5 @@ module.exports = {
             })
         }else res.send({ err: "Access denies" })
     }
-
+    
 }

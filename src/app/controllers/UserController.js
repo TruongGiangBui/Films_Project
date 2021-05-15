@@ -1,3 +1,4 @@
+const { notify } = require('../../routes/apis');
 const Film = require('../models/Films');
 const User=require('../models/User')
 
@@ -13,14 +14,20 @@ class UserController {
                     if (user.password === password) {
                         res.cookie("user", user.username);
                         res.cookie("role", user.role);
-                        res.send("logedin");
+                        res.redirect("/")
                     }
-                    else res.send({ err: "Wrong password" })
+                    else res.redirect("/user/login?err=1")
                 }
-                else res.send({ err: "Username does not exist" })
+                else 
+                res.redirect("/user/login?err=2")
             }).catch(() => {
-                res.send({ err: "Username does not exist" })
+                res.redirect("/user/login?err=2")
             })
+    }
+    logout(req, res, next) {
+        res.clearCookie('user');
+        res.clearCookie('role');
+        res.redirect("/")
     }
     //create new user
     //post
@@ -30,19 +37,54 @@ class UserController {
             var user = new User({ username: req.body.username, password:req.body.password })
             user.save()
             .then(user => {
-                res.send(user.username)
-            }).catch(err => {
-                res.send("user exist")
+                res.cookie("user", user.username);
+                res.cookie("role", user.role);
+                res.redirect("/")
+            }).catch(() => {
+                res.redirect("/user/signup?err=1")
             })
-        }
+        } 
     }
     //role all
     //userinfo
     //get
     userinfo(req, res, next) {
-        res.cookie("user","giang")
-        res.send("info")
+        User.findOne({ username: req.cookies.user })
+        .then(user => {
+            res.send({username:user.username,role:user.role});
+        }).catch(() => {
+            res.send({"err":"Bạn chưa đăng nhập"});
+        })
     }
+    //role all
+    addhistory(req, res, next) {
+        if (req.body.slug)
+        {
+            User.findOneAndUpdate(
+                { username: req.cookies.user },
+                {
+                    $push:{history:req.body.slug}
+                }
+            ).then(() => res.send({ info:"success"}))
+                .catch(() => {
+                    res.send({ info: "fail" })
+            }) 
+        }else res.send({ info: "fail" })
+    }
+    gethistory(req, res, next) {
+        var page = 1;
+        if (req.query.page) page = Number(req.query.page)
+        var begin = (page - 1) * 5
+        var end = page * 5;
+        console.log(page)
+        User.findOne({ username: req.cookies.user })
+            .then(user =>{
+                res.send(user.history.reverse().slice(begin, end));
+        }).catch(next)
+        
+        
+    }
+
     //role admin
     //delete
     deleteuser(req, res, next) {
@@ -54,8 +96,12 @@ class UserController {
     //user notification
     //get
     notification(req, res, next) {
-       
-        res.send("notifiaction "+req.cookies.user)
+        User.findOne({ username: req.cookies.user })
+        .then(user => {
+            res.send(user.notification);
+        }).catch(() => {
+            res.send([]);
+        })
     }
     //views user
     //role admin

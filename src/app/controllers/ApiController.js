@@ -22,5 +22,12 @@ class ApiController {
             res.send(films);
         }).catch(next)
     }
+    getfilm(req, res, next) {
+        Film.findOne(
+            {slug:req.params.slug}
+        ).then(film => {
+            res.send(film);
+        }).catch(next)
+    }
 }
 module.exports = new ApiController();

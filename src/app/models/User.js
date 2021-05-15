@@ -4,8 +4,11 @@ const User = new mongoose.Schema({
     username:{ type : String , unique : true, required : true},
     password: { type: String, required: true },
     role: { type: String, required: true, default: "user" },
-    history: [String],
-    notification:[String]
+    history: [{ type: String }],
+    notification: [{
+        img: { type: String },
+        info:{type:String}
+    }]
 });
 
 module.exports = mongoose.model('User', User);

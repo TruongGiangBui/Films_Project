@@ -209,7 +209,7 @@
     color: var(--text-color);
 }
 .film-watch-block{
-    width: 900%;
+    width: 90%;
     background-color: var(--white-color) ;
     border-radius: 20px;
     padding: 10px;
@@ -221,4 +221,139 @@
 .watch-frame{
     width:100%;
     height:  calc(100vw * .40);
+}
+.loginform-block h1 {
+    text-align: center;
+}
+.loginform-block{
+    margin-left: 25%;
+    background-color: var(--white-color) ;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid rgb(114, 114, 114);
+}
+.loginform{
+    
+}
+.loginform__input-block{
+    margin-left:10%;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid rgb(114, 114, 114);
+}
+.loginform__input{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin:  5px 5%;
+    color: var(--text-color);
+}
+.loginform__btn{
+    align-self: center;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 40%;
+    border: none;
+    font-size: 1.4rem;
+    outline: none;
+    color: var(--white-color);
+    font-weight: 600;
+    box-shadow: 0 4px #999;
+    will-change: transform;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.loginform__btn:hover{
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+.signup-link{
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+.loginform__input-alert{
+    margin-left:10%;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 5px;
+    border:none;
+    padding: 10px;
+    background-color: darksalmon;
+    text-align: center;
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    will-change: opacity,transform;
+    animation: alertshow ease-in .2s;
+}
+@keyframes alertshow{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.historyframe{
+    width: 90%;
+    background-color: var(--white-color) ;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 5%;
+    margin-top: 20px;
+    border: 1px solid rgb(114, 114, 114);
+    margin-bottom: 30px;
+}
+.history_header{
+    color: var(--text-color);
+    text-align: center;
+}
+.history-list{
+    list-style: none;
+}
+.history-item{
+    width: 90%;
+    display: flex;
+}
+.history-item__link{
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+}
+.history-item{
+    margin: 5px;
+}
+.history-item__img{
+    width: 60px;
+}
+.history-item-info{
+    color:var(--text-color);
+    flex: 1;
+    margin-left: 5%;
+    display: block;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.history-item-nameeng{
+    font-size: 2rem;
+}
+.history-item-namevie{
+    font-size: 1.5rem;
 }

@@ -15,11 +15,17 @@ class FilmController {
     watch(req, res, next) {
         Film.findOne({ slug: req.params.slug })
           .then((film) => {
+            Film.findOneAndUpdate(
+              { slug: film.slug },
+              {views:Number(film.views)+1}
+            ).catch(next)
+            
             res.render('films/watch', {
               film: mongooseToObject(film),
             });
+            return
           })
-          .catch(next);
+          .catch();
       }
 }
 module.exports = new FilmController();

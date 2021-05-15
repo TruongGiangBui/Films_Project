@@ -81,7 +81,7 @@
 }
 .header__notify-item{
     display: flex;
-    background: rgba(19, 1, 102, 0.3);
+    background: rgba(198, 198, 199, 0.3);
 }
 .header__notify-item:hover{
     background: rgba(99, 95, 104, 0.4);
@@ -107,6 +107,7 @@
 }
 .header__notify-name{
     display: block;
+    color:var(--text-color)
 }
 .header__notify-footer{
     

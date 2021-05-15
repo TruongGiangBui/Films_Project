@@ -1,4 +1,4 @@
- <div class="app">
+<div class="app">
     <header class="header">
         <div class="grid">
             <nav class="header__navbar">
@@ -59,52 +59,76 @@
     <div class="container">
         <div class="grid">
             <div class="grid__row">
-                <div class="grid__column-9">
-                    <div class="grid__row" style="margin-top: 40px;">
-                        <div class="grid__column-4">
-                            <img src="{{film.poster_link}}" alt=""
-                                class="film-poster">
-                        </div>
-                        <div class="grid__column-8">
-                            <div class="film-detail">
-                                    <div class="film-name">
-                                    <h1 class="film-detail-name">{{film.movie_name_eng}}</h1>
-                                    <h1 class="film-detail-name">{{film.movie_name_vie}}</h1>
-                                </div>
-                                <div class="film-rate">
-                                    <div class="film-idmb">
-                                        <i class="fab fa-imdb film-idmb-icon"></i>{{film.idmb}}
-                                    </div>
-                                    <div class="film-status">{{film.status}}</div>
-                                    <div class="film-resolution">{{film.resolution}}</div>
-                                </div>
-
-                                <div class="film-content__watch">
-                                    <p class="film-content-text">
-                                        {{film.film_content}}
-                                    </p>
-                                </div>
-                            </div>
+                <div class="grid__column-9" style="margin-top: 40px;">
+                    <div class="historyframe">
+                            <h1 class="history_header">Lịch sử xem phim</h1>
+                            <ul id="history-list"class="history-list">
+                                
+                            </ul>
 
                         </div>
-                    </div>
+                        
+                        <script>
 
-                    <div class="grid__row">
-                        <div class="film-watch-block">
-                            <h1 class="film-content-header">Xem phim</h1>
-                            <iframe class="watch-frame"
-                                src="{{film.film_link}}"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write;
-                                encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-
-
-
+                            historylist=document.getElementById('history-list')
+                                fetch("/user/apis/history?page={{page}}")
+                                .then(res=>{
+                                    return res.json();
+                                }).then(data=>{
+                                    data.forEach(slug=>{
+                                        fetch("/apis/filminfo/"+slug)
+                                        .then(res=>{
+                                            return res.json()
+                                        })
+                                        .then(film=>{
+                                            historylist.innerHTML+=`<li class="history-item">
+                                    <a href="/films/`+film.slug
+                                    +`" class="history-item history-item__link">
+                                        <img src="`+film.poster_link
+                                        +`" alt="" class="history-item__img">
+                                        <div class="history-item history-item-info">
+                                            <h1 class=history-item-nameeng>`+film.movie_name_eng
+                                                +`</h1>
+                                            <h2 class="history-item-namevie">`+film.movie_name_vie
+                                                +`</h2>
+                                        </div>
+                                    </a>
+                                </li>`
+                                        })
+                                    })
+                                })
+                        </script>
+                    <ul class="pagination">
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item__link">
+                                <i class="pagination-item__icon fas
+                                    fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="pagination-item
+                            pagination-item--active">
+                            <a href="" class="pagination-item__link">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a
+                                href=""
+                                class="pagination-item__link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item__link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item__link">4</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item__link">
+                                <i class="pagination-item__icon fas
+                                    fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                 <div class="grid__column-3">
+                <div class="grid__column-3">
                     <nav class="category">
                         <h2 class="category__heading">
                             <i class="fas fa-list-ul
@@ -121,14 +145,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var data=new FormData()
-        data.append("slug","{{film.slug}}")
-        var request = new XMLHttpRequest();
-        
-        request.open("POST", '/user/apis/addhistory');
-        request.send(data);
-    </script>
     <footer class="footer">
         <div class="grid">
             <div class="grid__row">
@@ -137,7 +153,8 @@
                         <i class="fab fa-facebook"></i> My facebook
                     </a>
                     <a href="" class="footer-link">
-                        <i class="fas fa-envelope"></i> abcxyz@sis.edu.vn
+                        <i class="fas fa-envelope"></i>
+                        abcxyz@sis.edu.vn
                     </a>
                 </div>
             </div>
