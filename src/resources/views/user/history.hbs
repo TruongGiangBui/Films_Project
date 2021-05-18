@@ -82,15 +82,11 @@
                                         })
                                         .then(film=>{
                                             historylist.innerHTML+=`<li class="history-item">
-                                    <a href="/films/`+film.slug
-                                    +`" class="history-item history-item__link">
-                                        <img src="`+film.poster_link
-                                        +`" alt="" class="history-item__img">
+                                    <a href="/films/${film.slug}" class="history-item history-item__link">
+                                        <img src="${film.poster_link}" alt="" class="history-item__img">
                                         <div class="history-item history-item-info">
-                                            <h1 class=history-item-nameeng>`+film.movie_name_eng
-                                                +`</h1>
-                                            <h2 class="history-item-namevie">`+film.movie_name_vie
-                                                +`</h2>
+                                            <h1 class=history-item-nameeng>${film.movie_name_eng}</h1>
+                                            <h2 class="history-item-namevie">${film.movie_name_vie}</h2>
                                         </div>
                                     </a>
                                 </li>`

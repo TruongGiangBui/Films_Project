@@ -65,10 +65,16 @@
                             <h1>Đăng kí</h1>
                             <form action="/user/apis/create" method="POST" class="loginform">
                                 <div class="loginform__input-block">
+                                    <input type="text" name="fullname" placeholder="Tên người dùng" class="loginform__input">
+                                </div>
+                                <div class="loginform__input-block">
                                     <input type="text" name="username" placeholder="Tên đăng nhập" class="loginform__input">
                                 </div>
                                 <div class="loginform__input-block">
                                     <input type="password" placeholder="Mật khẩu" name="password" class="loginform__input">
+                                </div>
+                                <div class="loginform__input-block">
+                                    <input type="password" placeholder="Xác nhận mật khẩu" name="confirmpassword" class="loginform__input">
                                 </div>
                                 {{#each errs}}
                                     <div class="loginform__input-alert">

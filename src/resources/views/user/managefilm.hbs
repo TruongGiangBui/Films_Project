@@ -118,7 +118,19 @@
                                     else element.style.display="none"
                                 }
                                 function confirmdelete(id){
-                                    displayalert(id)
+                                    fetch("/user/apis/deletefilm?slug="+id,
+                                    {
+                                        method:"DELETE"
+                                    })
+                                    .then(res=>{
+                                        return res.json()
+                                    }).then(data=>{
+                                        console.log(data);
+                                    })
+                                    .catch(err=>{
+
+                                    })
+                                    location.reload();            
                                 }
                                 function canceldelete(id){
                                     displayalert(id)

@@ -583,6 +583,7 @@
     padding-left: 10px;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
+    background-color: var(--white-color);
 }
 .film__upload__input-box-file{
     border: none;
@@ -626,4 +627,72 @@
     animation: AlertGrow ease-in 0.15s;
     transform-origin: top ;
     will-change: opacity,transform;
+}
+.film__upload__input-dropbox{
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    padding: 3px;
+}
+.film__upload__input-dropbox-menu{
+    color: var(--text-color);
+    background-color: var(--white-color);
+    border: none;
+    outline: none;
+}
+.manage__account-tab{
+    display: flex;
+    padding: 20px;
+    padding-left: 40px;
+    
+}
+.manage__account-avt{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center; 
+}
+.manage__account_info{
+    padding: 20px;
+}
+.manage__account_info-text{
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+.change-password-tab{
+    padding:60px;
+    padding-top: 20px;
+    margin: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    display: none;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    animation: AlertGrow ease-in 0.15s;
+    transform-origin: top ;
+    will-change: opacity,transform;
+}
+.confirm_change_btn{
+    align-items: center;
+}
+.manage_account_alert{
+    padding: 10px;
+    background-color: darksalmon;
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 60px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    animation: AlertGrow ease-in 0.15s;
+    transform-origin: top ;
+    will-change: opacity,transform;
+    display: none;
+    overflow-wrap: normal;
 }

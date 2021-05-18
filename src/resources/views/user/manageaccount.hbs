@@ -1,4 +1,4 @@
- <div class="app">
+<div class="app">
     <header class="header">
         <div class="grid">
             <nav class="header__navbar">
@@ -59,52 +59,54 @@
     <div class="container">
         <div class="grid">
             <div class="grid__row">
-                <div class="grid__column-9">
-                    <div class="grid__row" style="margin-top: 40px;">
-                        <div class="grid__column-4">
-                            <img src="{{film.poster_link}}" alt=""
-                                class="film-poster">
-                        </div>
-                        <div class="grid__column-8">
-                            <div class="film-detail">
-                                    <div class="film-name">
-                                    <h1 class="film-detail-name">{{film.movie_name_eng}}</h1>
-                                    <h1 class="film-detail-name">{{film.movie_name_vie}}</h1>
-                                </div>
-                                <div class="film-rate">
-                                    <div class="film-idmb">
-                                        <i class="fab fa-imdb film-idmb-icon"></i>{{film.idmb}}
-                                    </div>
-                                    <div class="film-status">{{film.status}}</div>
-                                    <div class="film-resolution">{{film.resolution}}</div>
-                                </div>
-
-                                <div class="film-content__watch">
-                                    <p class="film-content-text">
-                                        {{film.film_content}}
-                                    </p>
+                <div class="grid__column-9" style="margin-top:40px">
+                        <div class="manage_film">
+                            <h1 class="manage_film_header">Thông tin tài khoản</h1>
+                            <div class="manage__account-tab">
+                                <img src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/design/discover/mascot-logo-design/mascot-logo-design_fb-img_1200x800.jpg" alt="" class="manage__account-avt">                                <div class="manage__account_info">
+                                    <div class="manage__account_info-text">Tên người dùng: {{user.fullname}}</div>
+                                    <div class="manage__account_info-text">Tên đăng nhập: {{user.username}}</div>
+                                    <div class="admin_button" onclick=showchangepasswordtab()>Thay đổi mật khẩu</div>
                                 </div>
                             </div>
-
+                            <div class="change-password-tab" id="change-password-tab">
+                                <form action="/user/apis/changepassword" class="change-password-form" method="POST">
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Mật khẩu cũ</div>
+                                        <div class="film__upload__input-box"><input name="oldpassword" type="password" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Mật khẩu mới</div>
+                                        <div class="film__upload__input-box"><input name="newpassword" type="password" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Xác nhận mật khẩu mới</div>
+                                        <div class="film__upload__input-box"><input name="confirmnewpassword" type="password" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div id="manage_account_alert"  class="manage_account_alert">{{alert}}</div>
+                                    <div style="display: flex;justify-content: center;padding-top: 20px;">
+                                        <input type="submit" class="admin_button confirm_change_btn" value="Đổi mật khẩu"></input>
+                                    </div>
+                                </form>
+                            </div>
+                            <script>
+                                function showchangepasswordtab(){
+                                    if(document.getElementById("change-password-tab").style.display=="block")
+                                    document.getElementById("change-password-tab").style.display="none"
+                                    else document.getElementById("change-password-tab").style.display="block"
+                                }
+                                var alerterr="{{alert}}";
+                                if(alerterr!=""){
+                                    document.getElementById("manage_account_alert").style.display="block";
+                                    document.getElementById("change-password-tab").style.display="block"
+                                }
+                            </script>
                         </div>
                     </div>
-
-                    <div class="grid__row">
-                        <div class="film-watch-block">
-                            <h1 class="film-content-header">Xem phim</h1>
-                            <iframe class="watch-frame"
-                                src="{{film.film_link}}"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write;
-                                encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-
-
-
-                </div>
-                 <div class="grid__column-3">
+                <div class="grid__column-3">
                     <nav class="category">
                         <h2 class="category__heading">
                             <i class="fas fa-list-ul
@@ -121,14 +123,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var data={"slug":"{{film.slug}}" }
-        var request = new XMLHttpRequest();
-        
-        request.open("PUT", '/user/apis/addhistory');
-        request.setRequestHeader("Content-Type", "application/json");
-        request.send(JSON.stringify(data));
-    </script>
     <footer class="footer">
         <div class="grid">
             <div class="grid__row">
@@ -137,7 +131,8 @@
                         <i class="fab fa-facebook"></i> My facebook
                     </a>
                     <a href="" class="footer-link">
-                        <i class="fas fa-envelope"></i> abcxyz@sis.edu.vn
+                        <i class="fas fa-envelope"></i>
+                        abcxyz@sis.edu.vn
                     </a>
                 </div>
             </div>

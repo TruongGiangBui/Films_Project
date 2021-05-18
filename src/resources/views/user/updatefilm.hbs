@@ -78,7 +78,97 @@
                                     </a>
                                
                                 </div>
-                            
+
+                                                 
+                            <h1 class="manage_film_header">Chỉnh sửa thông tin phim</h1>
+                                <div id="alert" class="film_upload_alert">{{alert}}</div>
+                                <script>
+                                    if(document.getElementById("alert").innerHTML=="") document.getElementById("alert").style.display="none";
+                                </script>
+                                <form action="/user/apis/updatefilm/{{film.slug}}" class="film__upload__form" id="uploadform" method="POST"  enctype="multipart/form-data">
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tên phim tiếng Anh</div>
+                                        <div class="film__upload__input-box"><input readonly="readonly" value="{{film.movie_name_eng}}" name="movie_name_eng" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tên phim tiếng Việt</div>
+                                        <div class="film__upload__input-box"><input  value="{{film.movie_name_vie}}" name="movie_name_vie" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tải lên poster</div>
+                                        <div class="film__upload__input-box film__upload__input-box-file">
+                                            <input  name="poster" type="file" class="film__upload__input-file">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Link trailer</div>
+                                        <div class="film__upload__input-box"><input value="{{film.trailer_link}}"  name="trailer_link" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Link phim</div>
+                                        <div class="film__upload__input-box"><input value="{{film.film_link}}"  name="film_link" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Trạng thái</div>
+                                        <div class="film__upload__input-box"><input  value="{{film.status}}"  name="status" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Điểm IDMB</div>
+                                        <div class="film__upload__input-box"><input  value="{{film.idmb}}" name="idmb" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Đạo diễn</div>
+                                        <div class="film__upload__input-box"><input  value="{{film.director}}" name="director" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Quốc gia</div>
+                                        <div class="film__upload__input-box"><input value="{{film.country}}"  name="country" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Ngày phát hành</div>
+                                        <div class="film__upload__input-box"><input value="{{film.release_date}}"  name="release_date" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Thời lượng</div>
+                                        <div class="film__upload__input-box"><input value="{{film.timespan}}"  name="timespan" type="text" class="film__upload__input">
+                                            </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Chất lượng</div>
+                                        <div class="film__upload__input-dropbox">
+                                                <select class="film__upload__input-dropbox-menu" name="quality" id="">
+                                                    <option value="Bản đẹp" selected>Bản đẹp</option>
+                                                    <option value="CAM">CAM</option>
+                                                    <option value="HD-Rip">HD-Rip</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Độ phân giải</div>
+                                        <div class="film__upload__input-dropbox">
+                                            <select class="film__upload__input-dropbox-menu" name="resolution" id="">
+                                                <option value="Full HD" selected>Full HD</option>
+                                                <option value="HD">HD</option>
+                                                <option value="SD">SD</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                    <div class="film__upload__box">
+                                        <div class="film__upload__form-label">Tóm tắt nội dung phim</div>
+                                        <div class="film__upload__input-box"><textarea name="film_content" rows="10"class="film__upload__input-content" >{{film.film_content}}</textarea>
+                                            </div>
+                                    </div>
+                                    <input type="submit" class="admin_button upload-form-submit-btn" value="Cập nhật">
+                                </form>
                         </div>
                     </div>
                 <div class="grid__column-3">

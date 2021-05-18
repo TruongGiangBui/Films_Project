@@ -10,6 +10,9 @@
     display: flex;
     justify-content: space-between;
 }
+.header__navbar__btn{
+    display: none;
+}
 .header__navbar-list{
     list-style: none;
     padding-left: 0;
