@@ -18,7 +18,7 @@ class UserController {
                         res.cookie("role", user.role,{
                             signed:true
                         });
-                        res.redirect("/")
+                        res.redirect("/home")
                     }
                     else res.redirect("/user/login?err=1")
                 }
@@ -31,7 +31,7 @@ class UserController {
     logout(req, res, next) {
         res.clearCookie('user');
         res.clearCookie('role');
-        res.redirect("/")
+        res.redirect("/home")
     }
     //create new user
     //post
@@ -46,7 +46,7 @@ class UserController {
                 res.cookie("role", user.role,{
                     signed:true
                 });
-                res.redirect("/")
+                res.redirect("/home")
             }).catch(() => {
                 res.redirect("/user/signup?err=1")
             })
