@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const morgan = require('morgan');
-const port = 3000;
+const port = 8080;
 const handlebars = require('express-handlebars');
 const route = require('./routes');
 const db = require('./config/db');
@@ -29,6 +29,6 @@ app.use(cookieParser("sghdfuasuifysa2ywu8434"));
 
 route(app);
 
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log(`Listening at http://localhost:${port}`);
 });

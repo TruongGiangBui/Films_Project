@@ -1,0 +1,453 @@
+[{
+  "_id": {
+    "$oid": "609cf0ff6cb0c93812715aa7"
+  },
+  "role": "user",
+  "history": [
+    "Captain-America-The-First-Avenger",
+    "The-Avengers",
+    "Avengers-4-Endgame"
+  ],
+  "notification": [],
+  "username": "chi",
+  "password": "123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609d3721153374593bf78873"
+  },
+  "role": "admin",
+  "history": [
+    "Avengers-4-Endgame",
+    "Doctor-Strange",
+    "Iron-Man",
+    "Thor-3-Ragnarok",
+    "Justice-Lueague",
+    "The-Falcon-and-the-Winter-Soldier",
+    "Iron-Man-3",
+    "Black-Panther",
+    "Black-Panther"
+  ],
+  "notification": [
+    {
+      "_id": {
+        "$oid": "60a202ece1842c84e4f7f78d"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tive"
+    },
+    {
+      "_id": {
+        "$oid": "60a202eee1842c84e4f7f78e"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tive"
+    },
+    {
+      "_id": {
+        "$oid": "60a202f2e1842c84e4f7f78f"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tivess"
+    },
+    {
+      "_id": {
+        "$oid": "60a202f4e1842c84e4f7f790"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tivess"
+    },
+    {
+      "_id": {
+        "$oid": "60a202f6e1842c84e4f7f791"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tives"
+    },
+    {
+      "_id": {
+        "$oid": "60a202f8e1842c84e4f7f792"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tives"
+    },
+    {
+      "_id": {
+        "$oid": "60a20404e5ef4e8739d9cfab"
+      },
+      "img": "/appdata/filmposters/Justice-Lueague.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a20c783840ab983e9ab57a"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21a216e3252ad6d1f062a"
+      },
+      "img": "/appdata/filmposters/Justice-Lueague.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21afd6e3252ad6d1f062c"
+      },
+      "img": "/appdata/filmposters/Juas-tives.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21bdb6e3252ad6d1f062e"
+      },
+      "img": "/appdata/filmposters/Juas-tives.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21c9e6e3252ad6d1f0630"
+      },
+      "img": "/appdata/filmposters/Juas-tives.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21d586e3252ad6d1f0632"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21d886e3252ad6d1f0633"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21df86e3252ad6d1f0635"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21e3f6e3252ad6d1f0637"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21efc6e3252ad6d1f0639"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21f3e6e3252ad6d1f063b"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21fa36e3252ad6d1f063d"
+      },
+      "img": "/appdata/filmposters/Avengers-4.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a21fc26e3252ad6d1f063f"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a2201a6e3252ad6d1f0641"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22c846e3252ad6d1f0643"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22c886e3252ad6d1f0645"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22cc46e3252ad6d1f0647"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22cc76e3252ad6d1f0649"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22cf46e3252ad6d1f064b"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22cf76e3252ad6d1f064d"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22ea8d2412bc326dfec5c"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22f2bd2412bc326dfec5e"
+      },
+      "img": "/appdata/filmposters/Juas-tive.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22f30d2412bc326dfec60"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22f6f8b99dbc4a2a4007a"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22fde8b99dbc4a2a4007c"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22ff1f26e63c5b1c4b76f"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a22ff7f26e63c5b1c4b770"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tive"
+    },
+    {
+      "_id": {
+        "$oid": "60a230408a1e60c6f3ca6cbf"
+      },
+      "img": "/appdata/filmposters/Juas-tive-Zack-Snyder.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a2304b8a1e60c6f3ca6cc0"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tive"
+    },
+    {
+      "_id": {
+        "$oid": "60a2305d8a1e60c6f3ca6cc1"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Juas tive"
+    },
+    {
+      "_id": {
+        "$oid": "60a2309c8a1e60c6f3ca6cc2"
+      },
+      "img": "/appdata/filmposters/The-Incredible-Hulk.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a27c576eff741dfddf2a21"
+      },
+      "img": "/appdata/filmposters/123.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a27c7b6eff741dfddf2a22"
+      },
+      "img": "/appdata/filmposters/123.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60a27c946eff741dfddf2a23"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công 123"
+    },
+    {
+      "_id": {
+        "$oid": "60aa1bf327709a2850842bc8"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công Justice Lueague"
+    },
+    {
+      "_id": {
+        "$oid": "60abf52489dbfb2b1e1d3ca4"
+      },
+      "img": "/appdata/filmposters/Iron-Man.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60abf58789dbfb2b1e1d3ca6"
+      },
+      "img": "/appdata/filmposters/The-Falcon-and-the-Winter-Soldier.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60abf5e089dbfb2b1e1d3ca7"
+      },
+      "img": "/appdata/filmposters/The-Falcon-and-the-Winter-Soldier.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60abf60589dbfb2b1e1d3ca8"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công The Falcon and the Winter Soldier "
+    },
+    {
+      "_id": {
+        "$oid": "60af5375e728a8780f83add9"
+      },
+      "img": "/appdata/filmposters/The-Falcon-and-the-Winter-Soldier.jpg",
+      "info": "Phim tải lên hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60af5395e728a8780f83adda"
+      },
+      "img": "/appdata/filmposters/The-Falcon-and-the-Winter-Soldier.jpg",
+      "info": "Phim cập nhật hoàn tất"
+    },
+    {
+      "_id": {
+        "$oid": "60af53abe728a8780f83addb"
+      },
+      "img": "/img/delete.png",
+      "info": "Xóa thành công The Falcon and the Winter Soldier "
+    }
+  ],
+  "username": "admin",
+  "password": "63a9f0ea7bb98050796b649e85481845",
+  "__v": 0,
+  "fullname": "Administrator"
+},{
+  "_id": {
+    "$oid": "609d3727153374593bf78874"
+  },
+  "role": "user",
+  "history": [
+    "Black-Panther",
+    "Avengers-3-Infinity-War",
+    "Captain-America-2-The-Winter-Soldier",
+    "Doctor-Strange",
+    "Ant-Man-and-the-Wasp",
+    "Avengers-4-Endgame",
+    "Avengers-2-Age-of-Ultron",
+    "Avengers-4-Endgame",
+    "The-Avengers",
+    "Captain-America-3-Civil-War",
+    "Captain-America-3-Civil-War",
+    "Avengers-3-Infinity-War",
+    "Avengers-3-Infinity-War",
+    "Doctor-Strange",
+    "The-Incredible-Hulk",
+    "Avengers-4-Endgame",
+    "Iron-Man-3",
+    "Captain-America-The-First-Avenger",
+    "Iron-Man-3"
+  ],
+  "notification": [],
+  "username": "giang",
+  "password": "202cb962ac59075b964b07152d234b70",
+  "__v": 0,
+  "fullname": "Bùi Trường Giang"
+},{
+  "_id": {
+    "$oid": "609d4a92ce5a017c34ce36e1"
+  },
+  "role": "user",
+  "history": [],
+  "username": "giangbui",
+  "password": "12345",
+  "notification": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "609fe9e7530649685c537e47"
+  },
+  "role": "user",
+  "history": [],
+  "username": "duong",
+  "password": "123456",
+  "notification": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60a2851732946431addda041"
+  },
+  "role": "user",
+  "history": [],
+  "fullname": "Trường Giang",
+  "username": "giang.bt183516",
+  "password": "827ccb0eea8a706c4c34a16891f84e7b",
+  "notification": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60abf4e889dbfb2b1e1d3ca3"
+  },
+  "role": "user",
+  "history": [],
+  "fullname": "Trường Giang",
+  "username": "giang123",
+  "password": "202cb962ac59075b964b07152d234b70",
+  "notification": [],
+  "__v": 0
+}]
